@@ -35,7 +35,7 @@
  */
 class DDWinUCache implements ArrayAccess {
 
-// Used to determine if a string is a regular expression.
+	// Used to determine if a string is a regular expression.
     const REGEXP_DELIMITER = '/';
 
     /**
