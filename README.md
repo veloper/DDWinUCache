@@ -9,25 +9,34 @@ A PHP class wrapper for the wincache_ucache* functions.
     /**
      * Get Cache Object
      */
-    $cacheObj = DDWinUCache::getInstance();
+    $cache = DDWinUCache::getInstance();
     
     /**
      * Cache Data
      */
-    $cacheObj->set('foo', 'bar');
-    $cacheObj->set('bar', 'candy');
-    $cacheObj->set('hello_world', 'we did it!');
-    $cacheObj->set('apple_red_core', 'simple tagging');
+    $cache->set('foo', 'bar');
+    $cache->set('bar', 'candy');
+    $cache->set('hello_world', 'we did it!');
+    $cache->set('apple_red_core', 'simple tagging');
+    // - or -
+    $cache['foo'] = 'bar';
+    $cache['bar'] = 'candy';
+    $cache['hello_world'] = 'we did it!';
+    $cache['apple_red_core'] = 'simple tagging';
     
     /**
      * Delete Cache Entries
      */
-    $cacheObj->delete('*or*'); // array('apple_red_core', 'hello_world');
+    $cache->delete('*or*'); // -> array('apple_red_core', 'hello_world');
+    // - or -
+    unset($cache['*or*']); // -> array('apple_red_core', 'hello_world');
     
     /**
      * Get Cached Data
      */
-    $cacheObj->get('foo'); // "bar"
+    $cache->get('foo'); // -> "bar"
+    // - or -
+    $cache['*or*']; // -> "bar"
 
 ## Website
 
