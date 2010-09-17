@@ -341,8 +341,8 @@ class DDWinUCache implements ArrayAccess {
         if($this->isSearchRegExp($search)) {
             $reg_exp = $search;
         } else if($this->isSearchWildCard($search)) {
-                $reg_exp = $this->getWildCardRegExp($search);
-            }
+            $reg_exp = $this->getWildCardRegExp($search);
+        }
         $key = $search;
         if(is_string($reg_exp) && (count($cache_ids_array = $this->getCacheIdsByRegExp($reg_exp)) > 0)) {
             $key = $cache_ids_array;
