@@ -2,7 +2,7 @@
 
 ## Purpose
 
-A PHP class wrapper for the wincache_ucache* functions.
+A PHP wrapper class for the wincache_ucache* functions.
 
 ## Basic Usage
 
@@ -18,7 +18,7 @@ A PHP class wrapper for the wincache_ucache* functions.
     $cache->set('bar', 'candy');
     $cache->set('hello_world', 'we did it!');
     $cache->set('apple_red_core', 'simple tagging');
-    // - or -
+    // === OR ===
     $cache['foo'] = 'bar';
     $cache['bar'] = 'candy';
     $cache['hello_world'] = 'we did it!';
@@ -28,15 +28,15 @@ A PHP class wrapper for the wincache_ucache* functions.
      * Delete Cache Entries
      */
     $cache->delete('*or*'); // -> array('apple_red_core', 'hello_world');
-    // - or -
+    // === OR ===
     unset($cache['*or*']); // -> array('apple_red_core', 'hello_world');
     
     /**
      * Get Cached Data
      */
     $cache->get('foo'); // -> "bar"
-    // - or -
-    $cache['*or*']; // -> "bar"
+    // === OR ===
+    $cache['*foo*']; // -> "bar"
 
 ## Website
 
