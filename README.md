@@ -36,7 +36,7 @@ A PHP wrapper class for the wincache_ucache* functions.
      */
     $cache->get('foo'); // -> "bar"
     // === OR ===
-    $cache['*foo*']; // -> "bar"
+    $cache['foo']; // -> "bar"
 
 ## Website
 
